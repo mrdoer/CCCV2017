@@ -1,0 +1,29 @@
+%% run_lct2.m
+    config.padding = 1.8;  %extra area surrounding the target
+	config.lambda = 1e-4;  %regularization
+	config.output_sigma_factor = 0.1;  %spatial bandwidth (proportional to target)	        
+    config.interp_factor=0.01; % best 0.01
+    config.kernel_sigma = 1;
+
+    config.features.hog_orientations = 9;
+    config.features.cell_size = 4;   % size of hog grid cell		
+    config.features.window_size = 6; % size of local region for intensity historgram  
+    config.features.nbins=8; % bins of intensity historgram
+    config.motion_thresh=0.15;  
+    config.appearance_thresh=0.38;
+    
+%% run_tracker.m
+	config.padding = 1.8;  %extra area surrounding the target
+    
+	config.lambda = 1e-4;  %regularization
+	config.output_sigma_factor = 0.1;  %spatial bandwidth (proportional to target)	        
+    config.interp_factor=0.01; % best 0.01
+    config.kernel_sigma = 1;
+    %HOG²ÎÊý   
+    config.features.hog_orientations = 9;
+    config.features.cell_size = 4;   % size of hog grid cell		
+    config.features.window_size = 6; % size of local region for intensity historgram  
+    config.features.nbins=8; % bins of intensity historgram
+    config.motion_thresh=0.15;  
+%     config.appearance_thresh=0.38;
+    config.appearance_thresh=0.38;
